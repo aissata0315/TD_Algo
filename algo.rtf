@@ -1,0 +1,511 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1036\deflangfe1036{\fonttbl{\f0\fmodern\fprq1\fcharset0 Courier New;}}
+{\colortbl ;\red0\green77\blue187;}
+{\*\generator Riched20 10.0.18362}{\*\mmathPr\mdispDef1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\nowidctlpar\f0\fs22\lang10252\par
+\cf1\fs36 Exercice\cf0\fs22 1\par
+ \par
+entier a,b,q,r;\par
+reel ratio;\par
+\tab debut\par
+\tab\tab afficher(\ldblquote entrer la valeur de a")\par
+\tab\tab lire(a)\par
+\tab\tab afficher(\ldblquote entrer la valeur de b \rdblquote )\par
+\tab\tab lire(b)\par
+\tab\tab si(b==0) alors\par
+\tab\tab\tab afficher(\ldblquote impossible \ldblquote )\par
+\tab\tab sinon\par
+\tab\tab\tab q = floor(a/b)\par
+\tab\tab\tab r = a%b\par
+\tab\tab\tab ratio = 100*a/b\par
+\tab\tab\tab afficher(\ldblquote le quotient est \ldblquote ,q)\par
+\tab\tab\tab afficher(\ldblquote le reste  \ldblquote ,r)\par
+\tab\tab\tab afficher(\ldblquote le ratio est  \ldblquote ,ratio)\par
+\tab\tab finsi\par
+\tab fin\par
+\par
+\cf1\fs36 Exercice\cf0\fs22 2\par
+\par
+entier r,s;\par
+constante p;\par
+\tab d\'e9but\par
+\tab\tab afficher(\ldblquote entrer le rayon du cercle \rdblquote )\par
+\tab\tab lire(r)\par
+\tab\tab p = 8*r*atan(1)\par
+\tab\tab s = 4*r*r*atan(1)\par
+\tab\tab afficher(\ldblquote le p\'e9rim\'e8tre du cercle est \ldblquote ,p)\par
+\tab\tab afficher(\ldblquote la surface du cercle est \ldblquote ,s)\par
+\tab fin\par
+\par
+\par
+\cf1\fs36 Exercice\cf0\fs22 3:\par
+\par
+exo3_1\par
+\par
+entier r1,r2,r3,RS;\par
+reel RP;\par
+debut\par
+
+\pard\nowidctlpar\li720 afficher(" entrer la resistance R1")\par
+
+\pard\nowidctlpar\tab lire(r1)\par
+\tab afficher(" entrer la resistance R2")\par
+\tab lire(r2)\par
+\tab afficher(" entrer la resistance R3")\par
+\tab lire(r3)\par
+\tab RS = r1+r2+r3\par
+\tab afficher("la resistance en serie est ",RS)\par
+\par
+\tab si((r==0 ET r2==0)OU(r1==0 ET r3==0)OU(r2==0 ET r3==0)) \tab alors\par
+\tab afficher("Impossible de calculer la RP ")\par
+\tab sinon\par
+\tab RP = (r1*r2*r3) / (r1*r2+r1*r3+r2*r3)\par
+\tab afficher("la resistance en parallelle est ",RP)\par
+\tab finsi\par
+fin\par
+\par
+\par
+exo3_2\par
+\par
+entier r1,r2,r3,rs,choix;\par
+chaine q;\par
+debut\par
+\tab afficher(" entrer la resistance R1")\par
+\tab lire(r1)\par
+\tab afficher(" entrer la resistance R2")\par
+\tab lire(r2)\par
+\tab afficher(" entrer la resistance R3")\par
+\tab lire(r3)\par
+\par
+\tab r\'e9peter\par
+\tab\tab afficher("Quelle resistance voulez-vous calculer?")\par
+\tab\tab afficher("1------Resistance en Serie")\par
+\tab\tab afficher("2------Resistance en Parallele")\par
+\tab\tab lire(choix)\par
+\tab\tab selon choix faire\par
+\tab\tab\tab cas 1 :\par
+\tab\tab\tab\tab rs = r1+r2+r3\par
+\tab\tab\tab\tab afficher("la RS est ",rs)\par
+\tab\tab\tab cas 2 :\par
+\par
+\tab\tab\tab si((r1===0 ET r2==0) OU (r1==0 ET r3==0) OU \tab\tab\tab (r2==0 ET r3==0)) \par
+\tab\tab\tab alors\par
+\tab\tab\tab afficher("Impossible de calculer RP")\par
+\tab\tab\tab sinon\par
+\tab\tab\tab rp = (r1*r2*r3) / (r1*r2+r1*r3+r2*r3)\par
+\tab\tab\tab afficher("la RP est ",rp)\par
+\tab\tab\tab finsi\par
+\tab\tab\tab sinon \par
+\tab\tab\tab afficher("votre choix n'existe pas ")\par
+\tab\tab finSelon\par
+\tab\tab afficher("voulez-vous continu\'e9 O/n")\par
+\tab\tab lire(q)\par
+\tab jusqua(q=="n")\par
+fin\par
+\par
+\par
+\cf1\fs36 Exercice 4:\cf0\fs22\par
+\par
+exo4_1\par
+\par
+entier n;\par
+reel p,x;\par
+Debut\par
+\tab afficher("entrer la valeur de x")\par
+\tab lire(x)\par
+\tab afficher("entrer la valeur de n")\par
+\tab lire(n)\par
+\tab p=pow(x,n)\par
+\tab afficher(x," a la puissance ",n," est ",p)\par
+fin\par
+\par
+exo4_2\par
+\par
+entier n, i;\par
+reel p,x;\par
+Debut\par
+\tab afficher("entrer la valeur de x")\par
+\tab lire(x)\par
+\tab afficher("entrer la valeur de n")\par
+\tab lire(n)\par
+\tab p=1\par
+\tab si(n==0)\par
+\tab\tab p=1\par
+\tab sinon\par
+\tab\tab pour(i=1 a abs(n))\par
+\tab\tab\tab p = p*x\par
+\tab\tab finpour\par
+\tab si(n<0)\par
+\tab p=1/p\par
+\tab finsi\par
+\tab finsi\par
+\tab afficher(x,' a la puissance ",n," est ",p)\par
+fin\par
+\par
+\cf1\fs36 Exercice\cf0\fs22 5:\par
+\par
+entier a,s,i;\par
+Debut\par
+\tab s=0\par
+\tab pour(i =1 a 5)\par
+\tab\tab afficher("entrer la valeur ",i)\par
+\tab\tab lire(a)\par
+\tab\tab s=s+i\par
+\tab finpour\par
+\tab afficher("l somme est ",s)\par
+fin\par
+\par
+\par
+\cf1\fs36 Exercice\cf0\fs22 6:\par
+reel x1,y1,x2,y2,dist;\par
+Debut:\par
+\tab Ecrire("Entrez les coordonn\'e9es du point A");\par
+\tab Lire("x1");\par
+\tab Lire("y1")\par
+\tab Ecrire("Entrez les coordonn\'e9es du point B");\par
+
+\pard\nowidctlpar\li720 Lire("x2");\par
+
+\pard\nowidctlpar\tab Lire("y2");\par
+\par
+
+\pard\nowidctlpar\li720 dist = sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));\par
+
+\pard\nowidctlpar\par
+\tab Ecrire("La distance entre A et B est:", dist);\par
+\par
+fin\par
+\par
+\par
+\cf1\fs36 Exercice\cf0\fs22 7:\par
+\par
+entier mont, B20,B10,B5,P2,P1; x,y,z,t;\par
+Debut:\par
+\tab Ecrire("Donnez un montant");\par
+\tab Lire("mont");\par
+\tab B20 = floor(mont/20);\par
+\tab x = mont%20;\par
+\tab B10 = floor(x/10);\par
+\tab y = x%10;\par
+\tab B5 = floor(y/5);\par
+\tab z = y%5;\par
+\tab P2 = floor(z/2);\par
+\tab t = z%2;\par
+\tab P1 = t;\par
+\tab Ecrire("Le montant peut etre decompos\'e9 en:", B20 'billet \tab de 20'+ B10 'Billet de 10'+ B5 'Billet de 5'+ P2 'piece \tab de 2'+ P1 'piece de 1')\par
+Fin\par
+\par
+\cf1\fs36 Exercice\cf0\fs22 8:\par
+\par
+entier a,b,c,Delta;\par
+reel x0,x1,x2;\par
+Debut\par
+\tab afficher("entrer a")\par
+\tab lire(a)\par
+\tab afficher("entrer b ")\par
+\tab lire(b)\par
+\tab afficher("entrer c") \par
+\tab lire(c)\par
+\tab Delta = pow(b,2)-4*a*b\par
+\tab si(Delta>0)\par
+\tab\tab x1 = -b -sqrt(Delta)) / 2a\par
+\tab\tab x2 = -b -sqrt(Delta)) / 2a\par
+\tab\tab afficher("x = ",x1," ou x=  ",x2)\par
+\tab sinon\par
+\tab si(Delta==0)\par
+\tab\tab x0 = -b / 2a\par
+\tab\tab afficher("x = ",x0)\par
+\tab sinon\par
+\tab\tab afficher("x n'existe pas")\par
+\tab finsi\par
+\tab sinsi\par
+fin\par
+\par
+\par
+\par
+\par
+\cf1\fs36 Exercice\cf0\fs22  9:\par
+exo9_a\par
+\par
+
+\pard\nowidctlpar\li720 Entier Hdep, Hdar,Mdep, Mdar, Dur\'e9e_en_Mn,Dur\'e9e_en_heure, Hdep_en_Mn, Hdar_en_Mn;\par
+\par
+D\'e9but:\par
+Ecrire("Donner l'heure de d\'e9part");\par
+Lire("Hdep");\par
+Ecrire("Donner minute de d\'e9part");\par
+Lire("Mdep")\par
+Ecrire("Donner l'heure d'arriver");\par
+Lire("Hdar");\par
+Ecrire("Donner minute d'arriver");\par
+Lire("Mdar");\par
+\par
+Hdep_en_Mn = Hdep*60+Mdep; \par
+Hdar_en_Mn = Hdar*60+Mdar; \par
+\par
+Dur\'e9e_en_Mn = abs(Hdar_en_Mn - Hdep_en_Mn);\par
+\par
+\par
+Ecrire("La dur\'e9e du trajet est: ", floor(Dur\'e9e_en_Mn/60)'Heure'+ Dur\'e9e_en_Mn%60 'minute');\par
+\par
+\par
+fin\par
+\par
+Exo9_b\par
+debut:\par
+\par
+
+\pard\nowidctlpar\li1440 Entier Hdep, Hdar,Mdep, Mdar, Dur\'e9e_en_Mn,Dur\'e9e_en_heure, Hdep_en_Mn, Hdar_en_Mn;\par
+\par
+D\'e9but:\par
+Ecrire("Donner l'heure de d\'e9part");\par
+Lire("Hdep");\par
+Ecrire("Donner minute de d\'e9part");\par
+Lire("Mdep")\par
+Ecrire("Donner l'heure d'arriver");\par
+Lire("Hdar");\par
+Ecrire("Donner minute d'arriver");\par
+Lire("Mdar");\par
+\par
+si(Hdep>Hdar) \par
+alors\par
+\tab Hdar = Hdar+24\par
+finsi\par
+\par
+Hdep_en_Mn = Hdep*60+Mdep; \par
+Hdar_en_Mn = Hdar*60+Mdar; \par
+\par
+Dur\'e9e_en_Mn = abs(Hdar_en_Mn - Hdep_en_Mn);\par
+Ecrire("La dur\'e9e du trajet est: ", floor(Dur\'e9e_en_Mn/60)'Heure'+ Dur\'e9e_en_Mn%60 'minute');\par
+
+\pard\nowidctlpar\par
+fin\par
+\par
+\par
+\cf1\fs36 Exercice\cf0\fs22 10:\par
+\par
+\par
+\par
+\cf1\fs36 Exercice\cf0\fs22 11:\par
+\par
+entier a;\par
+reel r;\par
+char c;\par
+\par
+Debut:\par
+\tab Ecrire("Entrez l'entier a");\par
+\tab Lire("a);\par
+\tab Ecrire("Quel op\'e9ration souhaiterai vous faire?");\par
+\tab Lire("c");\par
+\tab Si('c' == '+')\par
+\tab Debut si:\par
+\tab\tab r=a+b;\par
+\tab\tab Ecrire("L'addition de a et b donne:",r);\par
+\tab fin si;\par
+\par
+\tab Si('c' == '*')\par
+\tab Debut si:\par
+\tab\tab r=a*b;\par
+\tab\tab Ecrire("La multiplication de a et b donne:",r);\par
+\tab fin si\par
+\par
+\tab Si('c' == '/')\par
+\tab Debut si:\par
+\tab\tab r=a/b;\par
+\tab\tab Ecrire("La division de a et b donne:",r);\par
+\tab fin si;\par
+\par
+\tab Si('c' == '-')\par
+\tab Debut si:\par
+\tab\tab r=a-b;\par
+
+\pard\nowidctlpar\li1440 Ecrire("La soustraction de a et b donne:",r);\par
+
+\pard\nowidctlpar\tab fin si\par
+fin\par
+\par
+\cf1\fs36 Exercice\cf0\fs22 12\~: \par
+entier n, somme diviseur S=0;\par
+Debut:\par
+\tab Ecrire("Donnez un entier");\par
+\tab Lire("n");\par
+\tab Pour(i=1 jusqu'a i=n/2)\par
+\tab debut pour:\par
+\tab\tab Si(n%i=0)\par
+\tab\tab debut si:\par
+\tab\tab S=S+i;\par
+\tab\tab fin Si\par
+\tab fin pour\par
+\tab Si(S=n)\par
+\tab Ecrire("Le nombre n est parfait");\par
+\tab Sinon:\par
+\tab Ecrire("Le nombre n n'est pas parfait);\par
+\par
+\cf1\fs36 Exercice 13\cf0\fs22\par
+\par
+entier j, m,a;\par
+Debut: \par
+\tab Ecrire("Entrez j,m,a"?)\par
+\tab Lire("j");\par
+\tab Lire("m");\par
+\tab Lire("a");\par
+\tab Si(m=[1,3,5,7,8,10,12]) et (j<=31)\par
+\tab Ecrire("date valide")\par
+\tab Sinon\par
+\tab Ecrire("date invalide")\par
+\tab Si(m=[4,6,9,11] et (j<=30)\par
+\tab Ecrire("date valide")\par
+\tab Sinon\par
+\tab Ecrire("date invalide")\par
+\tab Si(m=2) et (j<=29)\par
+\tab Ecrire("date valide);\par
+\tab Sinon\par
+\tab Ecrire("date invalide")\par
+fin\par
+\par
+\cf1\fs36 exercice\cf0\fs22 15:\par
+*****Addition*****\par
+\par
+entier n,s=0;\par
+Debut:\par
+\tab Ecrire("Donnez le nombre");\par
+\tab Lire("n");\par
+\tab Pour(i=1 jusqu'a i=n)\par
+\tab Debut pour:\par
+\tab\tab S=S+i;\par
+\tab Fin pour:\par
+\tab Ecrire("la somme des entiers est:",S);\par
+Fin\par
+\par
+*****Multiplication*******\par
+\par
+entier n,s=0, m;\par
+Debut:\par
+\tab Ecrire("Donnez le nombre");\par
+\tab Lire("n");\par
+\tab Pour(i=1 jusqu'a i=n)\par
+\tab Debut pour:\par
+\tab\tab S=S+i;\par
+\tab Fin pour:\par
+\tab m= S/n;\par
+\tab Ecrire("la moyenne des entiers est:",m);\par
+fin\par
+\par
+\par
+\cf1\fs36 Excercice16\cf0\fs22 :\par
+\par
+entier a,b,q;\par
+Debut:\par
+\tab Ecrire("entre le dididende ");\par
+\tab Lire("a"),\par
+\tab Ecrire("Entrez le diviseur");\par
+\tab Lire("b")\par
+\tab tant que(a=>b)\par
+\tab debut tant que:\par
+\tab\tab a=a-b;\par
+\tab\tab q=q++;\par
+\tab fintantque\par
+\tab Ecrire("La division par ss donne:",q);\par
+fin\par
+\tab\tab\par
+\cf1\fs36 Exercice 17:\par
+\cf0\fs22 entier a, b pgcd;\par
+debut:\par
+\tab Ecrire("Donnez un nombre")\par
+\tab Lire("a")\par
+\tab Ecrire("Donnez un nombre")\par
+\tab Lire("b")\par
+\tab\cf1\fs36\par
+\cf0\fs22\par
+\par
+\par
+\par
+\par
+\par
+\par
+\tab\par
+\tab\par
+\par
+\tab\tab\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 
