@@ -376,7 +376,7 @@ Debut:\par
 \tab Ecrire("la somme des entiers est:",S);\par
 Fin\par
 \par
-*****Multiplication*******\par
+*****Moyenne*******\par
 \par
 entier n,s=0, m;\par
 Debut:\par
@@ -393,7 +393,7 @@ fin\par
 \par
 \cf1\fs36 Excercice16\cf0\fs22 :\par
 \par
-entier a,b,q;\par
+entier a,b,q=0;\par
 Debut:\par
 \tab Ecrire("entre le dididende ");\par
 \tab Lire("a"),\par
@@ -414,9 +414,110 @@ debut:\par
 \tab Lire("a")\par
 \tab Ecrire("Donnez un nombre")\par
 \tab Lire("b")\par
+\tab tant que(a!=b)\par
+\tab\tab Si(a>b)\par
+\tab\tab a=a-b\par
+\tab\tab Si(b>a)\par
+\tab\tab b=b-a\par
+\tab Ftanq\par
+\tab Ecrire("Le pgcd est:",b)\par
+fin\par
+\tab\par
+\cf1\fs36 Exercice 18:\cf0\fs22\tab\par
+\par
+entier a, b ppcm;\par
+debut:\par
+\tab Ecrire("Donnez un nombre")\par
+\tab Lire("a")\par
+\tab Ecrire("Donnez un nombre")\par
+\tab Lire("b")\par
+\tab tant que(a!=b)\par
+\tab\tab Si(a>b)\par
+\tab\tab b=b+b\par
+\tab\tab Si(b>a)\par
+\tab\tab a=a+a\par
+\tab Ftanq\par
+\tab Ecrire("Le ppcm est:",a)\par
+fin\par
+\par
+\par
+\par
+\cf1\fs36 Exercice 19:\par
+\par
+\cf0\fs22 variables\par
+Somme S=0, n:entier;\par
+D\'e9but:\par
+\tab faire:\par
+\tab Ecrire("Entrez un prix")\par
+\tab Lire("n")\par
+\tab S=S+n\par
+\tab tantque(n!=0)\par
+fin\par
+\par
+\par
+\cf1\fs36 Exercice 20:\cf0\fs22\par
 \tab\cf1\fs36\par
+\cf0\fs22 Variable\par
+\tab max=0,indice=0,nombre:entier\par
+\tab Tab=[10]\par
+Debut:\par
+
+\pard\nowidctlpar\li720 POur(i=1 \'e0 10)\par
+\tab Ecrire("Donnez un entier")\par
+\tab Lire("nombre")\par
+\tab Tab[i]=nombre\par
+\tab Si(nombre>max)\par
+\tab\tab max = nombre\par
+\tab\tab indice = 1\par
+\tab Fsi\par
+Fpour\par
+
+\pard\nowidctlpar Fin\cf1\fs36\par
 \cf0\fs22\par
 \par
+\par
+\cf1\fs36 Exercice 21:\par
+\cf0\fs22\par
+Variable\par
+\tab nombre, x : Entier\par
+D\'e9but:\par
+\par
+\tab Ecrire("Entrez le nombre"\par
+\tab Lire("nombre")\par
+\par
+\tab Faire:\par
+\tab\tab Ecrire("Devinez le nombre")\par
+\tab\tab Lire("x")\par
+\tab\tab Si(x>nombre)\par
+\tab\tab Ecrire("trop grand")\par
+\tab\tab Si(x<nombre)\par
+\tab\tab Ecrire("trop petit"\par
+\tab tant que(x!=nombre)\par
+\tab Si(x=nombre)\par
+\tab Ecrire("Bravo!! vous avez devin\'e9 le nombre!")\par
+fin\par
+\par
+\par
+\cf1\fs36 Exercice 22:\par
+\par
+Exercice 23:\par
+\par
+Exercice 24: XXXXXXXXXXXXXXXXXXXXXXXX\par
+\par
+Exercice 25:\par
+\par
+\cf0\fs22 Variable\par
+\tab i,i:Entier\par
+Debut:\par
+\tab Pour(i=1 \'e0 10)\par
+\tab\tab Pour(j=1 \'e0 i)\par
+\tab\tab Ecrire("i")\par
+\tab\tab Fpour\par
+\tab Fpour\par
+Fin\par
+\cf1\fs36\par
+Exercice 26:\cf0\fs22\par
+\tab\par
 \par
 \par
 \par
